@@ -2,7 +2,7 @@ import React from 'react';
 
 export default () => (
   <svg
-    className="button-link resume scale-in-center"
+    className="scale-in-center"
     width="119"
     height="114"
     viewBox="0 0 119 114"

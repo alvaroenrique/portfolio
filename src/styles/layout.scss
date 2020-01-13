@@ -3,7 +3,9 @@
 body {
   // background-color: #34495e;
 }
-
+main {
+  position: relative;
+}
 .text-center {
   text-align: center;
 }
@@ -103,68 +105,30 @@ body {
 .scale-in-center {
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-.button-link {
+.buttons-container {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85vw;
+  max-width: 580px;
+  height: calc(100% + 255px);
+  display: flex;
+  justify-content: space-between;
 }
-
-.resume {
-  transform: translate(calc(-50% + -105px), calc(-50% + -130px));
-  animation: scale-in-center-resume 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-}
-.professional-work {
-  transform: translate(calc(-50% + -105px), calc(-50% + 130px));
-  animation: scale-in-center-pw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.personal-projects {
-  transform: translate(calc(-50% + 105px), calc(-50% + -130px));
-  animation: scale-in-center-pp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.blog {
-  transform: translate(calc(-50% + 105px), calc(-50% + 130px));
-  animation: scale-in-center-blog 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@keyframes scale-in-center-resume {
-  0% {
-    transform: translate(calc(-50% + -105px), calc(-50% + -130px)) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(calc(-50% + -105px), calc(-50% + -130px)) scale(1);
-    opacity: 1;
-  }
-}
-@keyframes scale-in-center-pw {
-  0% {
-    transform: translate(calc(-50% + -105px), calc(-50% + 130px)) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(calc(-50% + -105px), calc(-50% + 130px)) scale(1);
-    opacity: 1;
-  }
-}
-@keyframes scale-in-center-pp {
-  0% {
-    transform: translate(calc(-50% + 105px), calc(-50% + -130px)) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(calc(-50% + 105px), calc(-50% + -130px)) scale(1);
-    opacity: 1;
-  }
-}
-@keyframes scale-in-center-blog {
-  0% {
-    transform: translate(calc(-50% + 105px), calc(-50% + 130px)) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(calc(-50% + 105px), calc(-50% + 130px)) scale(1);
-    opacity: 1;
-  }
+.buttons-colums {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

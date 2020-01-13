@@ -32,12 +32,16 @@ const IndexPage = () => {
       )}
 
       {isSubtitleChange && (
-        <>
-          <BlogButton />
-          <PersonalProjectsButton />
-          <ProffesionalWorkButton />
-          <ResumeButton />
-        </>
+        <div className="buttons-container">
+          <div className="buttons-colums">
+            <BlogButton />
+            <PersonalProjectsButton />
+          </div>
+          <div className="buttons-colums">
+            <ProffesionalWorkButton />
+            <ResumeButton />
+          </div>
+        </div>
       )}
     </Layout>
   );
